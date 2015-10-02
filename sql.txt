@@ -1,0 +1,16 @@
+CREATE TABLE Event(
+	id	serial primary key,
+	userid INT not null,
+	starttime TIMESTAMP DEFAULT now(),
+	endtime TIMESTAMP,
+	place TEXT DEFAULT NULL,
+	title TEXT DEFAULT NULL,
+	description TEXT DEFAULT NULL
+);
+
+
+CREATE TABLE CalendarUser(
+	id	serial primary key,
+	email TEXT DEFAULT NULL,
+	password TEXT DEFAULT NULL
+);
